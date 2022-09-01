@@ -22,7 +22,7 @@
             "invalidLink": true
         },
         "readme": "none",
-        "name": "NBS.js",
+        "name": "tabler-icons-types",
         "includeVersion": true,
         "sort": ["static-first", "visibility"]
     },
