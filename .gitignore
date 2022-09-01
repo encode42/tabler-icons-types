@@ -1,0 +1,10 @@
+# Node.js
+/node_modules/
+
+# Build files
+/dist/
+/build/
+/src/generated/
+
+# Built website files
+/public

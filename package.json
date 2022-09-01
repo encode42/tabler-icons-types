@@ -1,0 +1,78 @@
+{
+  "name": "@encode42/tabler-icons-types",
+  "description": "Simple library that provides types and getters for Tabler Icons.",
+  "version": "0.0.4",
+  "author": {
+    "name": "Encode42",
+    "email": "me@encode42.dev",
+    "url": "https://encode42.dev"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/Encode42"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Encode42/tabler-icons-types.git"
+  },
+  "homepage": "https://encode42.github.io/tabler-icons-types",
+  "license": "MIT",
+  "keywords": [
+    "types",
+    "tags",
+    "tabler",
+    "icons",
+    "get"
+  ],
+  "main": "dist/cjs.js",
+  "module": "dist/esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "yarn run build:types && yarn run build:base && yarn run build:bundle",
+    "build:types": "ynpx esno lib",
+    "build:base": "tsc --build",
+    "build:bundle": "rollup -c",
+    "build:publish": "yarn run build && yarn publish",
+    "docs": "ynpx typedoc"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "@tabler/icons": "^1.91.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@tabler/icons": "^1.91.1",
+    "@types/common-tags": "^1.8.1",
+    "@types/jest": "^29.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "common-tags": "^1.8.2",
+    "esbuild": "^0.15.6",
+    "eslint": "8.22.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.0.1",
+    "eslint-plugin-jsonc": "^2.4.0",
+    "eslint-plugin-markdown": "^3.0.0",
+    "eslint-plugin-promise": "^6.0.1",
+    "eslint-plugin-security": "^1.5.0",
+    "eslint-plugin-sonarjs": "^0.15.0",
+    "eslint-plugin-tsdoc": "^0.2.16",
+    "eslint-plugin-unicorn": "^43.0.2",
+    "esno": "^0.16.3",
+    "jest": "^29.0.1",
+    "react": "^18.2.0",
+    "rollup": "^2.79.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-esbuild": "^4.10.1",
+    "rollup-plugin-node-externals": "^4.1.1",
+    "ts-jest": "^28.0.8",
+    "typedoc": "^0.23.13",
+    "typescript": "^4.8.2",
+    "ynpx": "^2.1.5"
+  },
+  "dependencies": {}
+}
