@@ -2,9 +2,9 @@ import * as fs from "fs";
 import path from "path";
 import { stripIndent } from "common-tags";
 import iconTags from "../../node_modules/@tabler/icons/tags.json";
-import { Tag, Tags } from "../../src/util/interface";
+import { Tag, Tags } from "../../src";
 
-export function generateTags(keys: string[]) {
+export function generateTags(target: string, keys: string[]) {
     const tags: Partial<Tags> = {};
 
     const iconTagsValues: Tag[] = Object.values(iconTags);
@@ -18,7 +18,7 @@ export function generateTags(keys: string[]) {
         };
     }
 
-    fs.writeFileSync(path.resolve("src/generated/tags.ts"), stripIndent`
+    fs.writeFileSync(path.join(target, "tags.ts"), stripIndent`
         import { Tags } from "../util/interface";
 
         /**

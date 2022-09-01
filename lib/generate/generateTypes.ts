@@ -3,10 +3,10 @@ import * as fs from "fs";
 import path from "path";
 import { stripIndent } from "common-tags";
 
-export function generateTypes() {
+export function generateTypes(target: string) {
     const types = Object.keys(tablerIcons);
 
-    fs.writeFileSync(path.resolve("src/generated/types.ts"), stripIndent`
+    fs.writeFileSync(path.join(target, "types.ts"), stripIndent`
         /**
          * An enum of Tabler Icons that exist.
          */

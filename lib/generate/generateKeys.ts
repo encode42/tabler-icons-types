@@ -2,8 +2,8 @@ import * as fs from "fs";
 import path from "path";
 import { stripIndent } from "common-tags";
 
-export function generateKeys(keys: string[]) {
-    fs.writeFileSync(path.resolve("src/generated/keys.ts"), stripIndent`
+export function generateKeys(target: string, keys: string[]) {
+    fs.writeFileSync(path.join(target, "keys.ts"), stripIndent`
         import { TablerIconsType } from "./types";
 
         /**
