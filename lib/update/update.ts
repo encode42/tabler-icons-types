@@ -10,7 +10,9 @@ export async function update() {
     // Get the latest version of tabler icons
     const response = await fetch("https://registry.npmjs.org/@tabler/icons");
     const json = await response.json();
-    const latest = Object.keys(json.versions)[0];
+
+    const versions = Object.keys(json.versions);
+    const latest = versions[versions.length - 1];
 
     if (latest === packageJson.version) {
         return;
@@ -22,7 +24,7 @@ export async function update() {
     fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, undefined, 2));
 
     return new Promise<void>((resolve, reject) => {
-        exec("yarn", (error, stdout) => {
+        exec("yarn", error => {
             if (error) {
                 reject(error);
             }

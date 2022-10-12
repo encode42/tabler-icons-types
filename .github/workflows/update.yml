@@ -1,4 +1,4 @@
-name: Build
+name: Update
 on:
   schedule:
   - cron: "*/15 * * * *"
@@ -31,3 +31,8 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: ${{ github.ref }}
+
+    - name: Publish
+      uses: JS-DevTools/npm-publish@v1
+      with:
+        token: ${{ secrets.NPM_TOKEN }}
