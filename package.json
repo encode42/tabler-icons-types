@@ -1,7 +1,7 @@
 {
   "name": "@encode42/tabler-icons-types",
   "description": "Simple library that provides types and getters for Tabler Icons.",
-  "version": "1.35.0",
+  "version": "1.103.0",
   "author": {
     "name": "Encode42",
     "email": "me@encode42.dev",
@@ -72,6 +72,6 @@
     "ynpx": "^2.1.5"
   },
   "dependencies": {
-    "@tabler/icons": "^1.35.0"
+    "@tabler/icons": "^1.103.0"
   }
 }
