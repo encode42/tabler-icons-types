@@ -1,9 +1,10 @@
 import fetch from "node-fetch";
-import { exec } from "child_process";
+import { gt } from "semver";
 import * as fs from "fs";
 import path from "path";
-
+import { exec } from "child_process";
 import packageJson from "../../package.json";
+
 const packageJsonPath = path.resolve("package.json");
 
 export async function update() {
@@ -14,13 +15,15 @@ export async function update() {
     const versions = Object.keys(json.versions);
     const latest = versions[versions.length - 1];
 
-    if (latest === packageJson.version) {
+    if (!gt(latest, packageJson.version)) {
         return;
     }
 
+    console.log(`Updating @tabler/icons to ${latest}...`);
+
     // Update the package.json
     packageJson.version = latest;
-    packageJson.dependencies["@tabler/icons"] = `^${latest}`;
+    packageJson.devDependencies["@tabler/icons"] = `^${latest}`;
     fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, undefined, 2));
 
     return new Promise<void>((resolve, reject) => {
