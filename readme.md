@@ -16,6 +16,7 @@
 - Array of every Tabler Icon name/type.
 - Truncated and normalized [tags.json](https://github.com/tabler/tabler-icons/blob/HEAD/tags.json).
 - Targeted towards [Tabler's React icons](https://github.com/tabler/tabler-icons/tree/HEAD/icons-react).
+- Package automatically updates when Tabler Icons updates.
 
 ### 🔧 Including
 <details>
