@@ -24,7 +24,7 @@ jobs:
     - name: Commit changes
       run: |
         git config --global user.email "action@github.com" && git config --global user.name "Github Action"
-        git commit -am "Updated @tabler/icons"
+        git commit -am "Updated @tabler/icons" || (echo "No updates found" && exit 0)
 
     - name: Push changes
       uses: ad-m/github-push-action@master
