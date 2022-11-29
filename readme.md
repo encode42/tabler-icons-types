@@ -60,15 +60,14 @@ import { TablerIconsType } from "https://cdn.jsdelivr.net/npm/@encode42/tabler-i
 </details>
 
 ### 🔨 Building
-Ensure [Yarn](https://yarnpkg.com/) and [Node.js](https://nodejs.org/en/) are installed.
+Ensure [pnpm](https://pnpm.io/) and [Node.js](https://nodejs.org/en/) are installed.
 
 1. Enter the directory containing the `tabler-icons-types` source code in your terminal.
-2. Install the build dependencies via `yarn install`.
-3. Run `yarn run build` to generate the Node.js and browser modules.  
+2. Install the build dependencies via `pnpm install`.
+3. Run `pnpm run build` to generate the Node.js and browser modules.  
 <sub>This will automatically update `@tabler/icons` if an update is available.</sub>
 
 Generated files:
-- `dist/cjs.js`: CommonJS bundle, used by Node.js.
-- `dist/esm.js`: ES module for browser script modules.
-- `dist/*.min.js`: Minified bundle.
-- `build/`: Built ECMAScript files.
+- `./cjs/`: CommonJS bundle, used by Node.js.
+- `./esm/`: ES module for browser script modules.
+- `./lib/`: Built ECMAScript files.

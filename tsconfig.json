@@ -1,38 +1,43 @@
 {
     "compilerOptions": {
-        "outDir": "build",
-        "target": "ES2021",
-        "lib": ["ES2021"],
-        "module": "ESNext",
+        "baseUrl": ".",
+        "rootDir": "src",
+        "outDir": "lib",
+        "declaration": true,
+        "declarationMap": true,
+        "declarationDir": "lib",
+        "target": "ES2020",
+        "lib": ["DOM", "ES2020"],
+        "module": "ES2020",
         "moduleResolution": "Node",
         "esModuleInterop": true,
         "isolatedModules": true,
         "allowJs": true,
-        "declaration": true,
         "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true,
-        "listFiles": true,
+        "composite": true,
+        "noEmitOnError": true,
         "resolveJsonModule": true
     },
     "typedocOptions": {
         "entryPoints": ["src/index.ts"],
-        "out": "public/docs",
-        "githubPages": true,
+        "out": "./public/docs",
+        "githubPages": false,
         "validation": {
             "invalidLink": true
         },
         "readme": "none",
-        "name": "tabler-icons-types",
+        "name": "node-extras",
         "includeVersion": true,
         "sort": ["static-first", "visibility"]
     },
     "include": [
-        "src/**/*.ts"
+        "./src"
     ],
     "exclude": [
-        "node_modules",
-        "tests",
-        "build",
-        "dist"
+        "./node_modules",
+        "./lib",
+        "./esm",
+        "./cjs",
+        "./public/docs"
     ]
 }

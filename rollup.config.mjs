@@ -3,31 +3,35 @@ import nodeExternals from "rollup-plugin-node-externals";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import esbuild from "rollup-plugin-esbuild";
 import json from "@rollup/plugin-json";
-import dts from "rollup-plugin-dts";
 import path from "path";
-import { name } from "./package.json";
 
 /**
- * The target output directory.
+ * The name of the project.
  *
  * @type {string}
  */
-const outDir = "dist";
+const name = "tabler-icons-types";
 
 /**
  * Get a base configuration
  *
- * @param {string} type Type to get base for
+ * @param {import("rollup").ModuleFormat} type Type to get base for
  * @param {boolean} [toMinify=false] Whether to create minified output
- * @return {Object}
+ * @return {import("rollup").RollupOptions}
  */
 function getBase(type, toMinify = false) {
+    const umd = type === "umd";
+    const shouldMinify = toMinify || umd;
+
     return {
-        "input": "src/index.ts",
+        "input": "./src/index.ts",
         "output": {
-            "file": `${outDir}/${type}${toMinify ? ".min" : ""}.js`,
-            "name": type === "umd" ? name : undefined,
-            "format": type
+            name,
+            "file": umd ? "./lib/index.umd.js" : undefined,
+            "dir": umd ? undefined : type,
+            "format": type,
+            "externalLiveBindings": false,
+            "preserveModules": !umd
         },
         "plugins": [
             commonjs(),
@@ -35,17 +39,22 @@ function getBase(type, toMinify = false) {
             nodeResolve({
                 "extensions": [
                     ".ts",
-                    ".js"
+                    ".tsx",
+                    ".js",
+                    ".jsx"
                 ]
             }),
             esbuild({
-                "minify": toMinify,
+                "minify": shouldMinify,
                 "sourceMap": false,
                 "tsconfig": path.resolve(process.cwd(), "tsconfig.json")
             }),
             json({
-                "compact": toMinify
+                "compact": shouldMinify
             })
+        ],
+        "external": [
+            "fs/promises"
         ]
     };
 }
@@ -53,27 +62,18 @@ function getBase(type, toMinify = false) {
 /**
  * Get the config for a build type.
  *
- * @param {string} types Types to build
- * @return {Object[]}
+ * @param {import("rollup").ModuleFormat} types Types to build
+ * @return {import("rollup").RollupOptions[]}
  */
 function getConfig(...types) {
-    const configs = [{
-        "input": "build/index.d.ts",
-        "output": {
-            "file": `${outDir}/index.d.ts`,
-            "format": "es"
-        },
-        "plugins": [
-            dts()
-        ]
-    }];
+    /**
+     * @type {import("rollup").RollupOptions[]}
+     */
+    const configs = [];
 
     // Generate config for each type
     for (const type of types) {
-        configs.push(
-            getBase(type),
-            getBase(type, true)
-        );
+        configs.push(getBase(type));
     }
 
     return configs;

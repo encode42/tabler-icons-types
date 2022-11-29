@@ -1,10 +1,10 @@
-# Node.js
-/node_modules/
-
 # Build files
-/dist/
-/build/
-/src/generated/
+/lib/
+/cjs/
+/esm/
 
 # Built website files
-/public
+/src/generated
+/public/docs/
+
+/tsconfig.tsbuildinfo
