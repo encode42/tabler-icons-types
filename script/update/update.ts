@@ -27,10 +27,14 @@ export async function update() {
     fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, undefined, 2));
 
     return new Promise<void>((resolve, reject) => {
-        exec("pnpm install", error => {
+        exec("pnpm install", (error, stdout, stderr) => {
             if (error) {
+                console.error(stderr);
+
                 reject(error);
             }
+
+            console.log(stdout);
 
             resolve();
         });
