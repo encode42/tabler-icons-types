@@ -27,7 +27,7 @@ export async function update() {
     fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, undefined, 2));
 
     return new Promise<void>((resolve, reject) => {
-        exec("yarn", error => {
+        exec("pnpm install", error => {
             if (error) {
                 reject(error);
             }
