@@ -4,7 +4,7 @@ specifiers:
   '@rollup/plugin-commonjs': ^23.0.3
   '@rollup/plugin-json': ^5.0.2
   '@rollup/plugin-node-resolve': ^15.0.1
-  '@tabler/icons': ^1.114.0
+  '@tabler/icons': ^1.116.1
   '@types/common-tags': ^1.8.1
   '@types/jest': ^29.2.3
   '@types/semver': ^7.3.13
@@ -38,7 +38,7 @@ devDependencies:
   '@rollup/plugin-commonjs': 23.0.3_rollup@3.5.0
   '@rollup/plugin-json': 5.0.2_rollup@3.5.0
   '@rollup/plugin-node-resolve': 15.0.1_rollup@3.5.0
-  '@tabler/icons': 1.114.0_react@18.2.0
+  '@tabler/icons': 1.116.1_react@18.2.0
   '@types/common-tags': 1.8.1
   '@types/jest': 29.2.3
   '@types/semver': 7.3.13
@@ -64,7 +64,7 @@ devDependencies:
   rollup-plugin-esbuild: 5.0.0_kvbyivc4d272hvjoaj77mmhoxa
   rollup-plugin-node-externals: 5.0.2_rollup@3.5.0
   semver: 7.3.8
-  ts-jest: 29.0.3_r7ajvdpa2y34tsjdd7rsppjonq
+  ts-jest: 29.0.3_rnmfb6xabv57o33e2yodualypq
   typedoc: 0.23.21_typescript@4.9.3
   typescript: 4.9.3
 
@@ -876,8 +876,8 @@ packages:
       '@sinonjs/commons': 1.8.6
     dev: true
 
-  /@tabler/icons/1.114.0_react@18.2.0:
-    resolution: {integrity: sha512-TI6l2YhGlpZGutaT/zrzTjLF0lsdB648QzM80Dhe22rL2lggvqOzcyWTw6ctmFTySgCwkmEnrUImOICjTlqoAA==}
+  /@tabler/icons/1.116.1_react@18.2.0:
+    resolution: {integrity: sha512-Ge/UZLhkuvr6G9wJNuFBf9WX0gt8v/3nZxBOz+Od6Yj5vE7fF6ViNBcPEPBw0Y+mzuy/g+h78nwpPLVPv4yGGg==}
     peerDependencies:
       react: ^16.x || 17.x || 18.x
       react-dom: ^16.x || 17.x || 18.x
@@ -4139,7 +4139,7 @@ packages:
       is-number: 7.0.0
     dev: true
 
-  /ts-jest/29.0.3_r7ajvdpa2y34tsjdd7rsppjonq:
+  /ts-jest/29.0.3_rnmfb6xabv57o33e2yodualypq:
     resolution: {integrity: sha512-Ibygvmuyq1qp/z3yTh9QTwVVAbFdDy/+4BtIQR2sp6baF2SJU/8CKK/hhnGIDY2L90Az2jIqTwZPnN2p+BweiQ==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     hasBin: true
@@ -4160,7 +4160,6 @@ packages:
       esbuild:
         optional: true
     dependencies:
-      '@babel/core': 7.20.5
       bs-logger: 0.2.6
       esbuild: 0.15.16
       fast-json-stable-stringify: 2.1.0
