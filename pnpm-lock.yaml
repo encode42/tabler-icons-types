@@ -4,7 +4,7 @@ specifiers:
   '@rollup/plugin-commonjs': ^23.0.3
   '@rollup/plugin-json': ^5.0.2
   '@rollup/plugin-node-resolve': ^15.0.1
-  '@tabler/icons': ^1.117.0
+  '@tabler/icons': ^1.118.0
   '@types/common-tags': ^1.8.1
   '@types/jest': ^29.2.3
   '@types/semver': ^7.3.13
@@ -38,7 +38,7 @@ devDependencies:
   '@rollup/plugin-commonjs': 23.0.3_rollup@3.5.0
   '@rollup/plugin-json': 5.0.2_rollup@3.5.0
   '@rollup/plugin-node-resolve': 15.0.1_rollup@3.5.0
-  '@tabler/icons': 1.117.0_react@18.2.0
+  '@tabler/icons': 1.118.0_react@18.2.0
   '@types/common-tags': 1.8.1
   '@types/jest': 29.2.3
   '@types/semver': 7.3.13
@@ -876,8 +876,8 @@ packages:
       '@sinonjs/commons': 1.8.6
     dev: true
 
-  /@tabler/icons/1.117.0_react@18.2.0:
-    resolution: {integrity: sha512-4UGF8fMcROiy++CCNlzTz6p22rxFQD/fAMfaw/8Uanopl41X2SCZTmpnotS3C6Qdrk99m8eMZySa5w1y99gFqQ==}
+  /@tabler/icons/1.118.0_react@18.2.0:
+    resolution: {integrity: sha512-/DFANTIQBz+Moissilo47WPOp598Ht4gxvAtK0f/OC5eL8bjzxbzd4dx7d1uwf1oQ/PvaQ3Sh2UhXKP0I1D1wg==}
     peerDependencies:
       react: ^16.x || 17.x || 18.x
       react-dom: ^16.x || 17.x || 18.x
