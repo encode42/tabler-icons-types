@@ -4,7 +4,7 @@ specifiers:
   '@rollup/plugin-commonjs': ^23.0.3
   '@rollup/plugin-json': ^5.0.2
   '@rollup/plugin-node-resolve': ^15.0.1
-  '@tabler/icons': ^2.0.0-alpha
+  '@tabler/icons': ^2.0.0-alpha2
   '@types/common-tags': ^1.8.1
   '@types/jest': ^29.2.3
   '@types/semver': ^7.3.13
@@ -38,7 +38,7 @@ devDependencies:
   '@rollup/plugin-commonjs': 23.0.3_rollup@3.5.0
   '@rollup/plugin-json': 5.0.2_rollup@3.5.0
   '@rollup/plugin-node-resolve': 15.0.1_rollup@3.5.0
-  '@tabler/icons': 2.0.0-alpha
+  '@tabler/icons': 2.0.0-alpha2
   '@types/common-tags': 1.8.1
   '@types/jest': 29.2.3
   '@types/semver': 7.3.13
@@ -876,8 +876,8 @@ packages:
       '@sinonjs/commons': 1.8.6
     dev: true
 
-  /@tabler/icons/2.0.0-alpha:
-    resolution: {integrity: sha512-AgiOUXUbdybTzWOj78oZ3ATh/I7ksg+BmXrcKT3zOolLGI3oeZ+kyrPZ5ql7+/bB1zdkQgGGQ4xIXb1WTblGfQ==}
+  /@tabler/icons/2.0.0-alpha2:
+    resolution: {integrity: sha512-oHY1XnZZhRWP1gDrKUXv30GjHuV51cVWseauwaj6dzLUyHlczbHb88je9yEew6CFlycu0AzUB3dBOY4pA80M5A==}
     dev: true
 
   /@types/babel__core/7.1.20:

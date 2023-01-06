@@ -1,7 +1,7 @@
 {
   "name": "@encode42/tabler-icons-types",
   "description": "Simple library that provides types and getters for Tabler Icons.",
-  "version": "2.0.0-alpha",
+  "version": "2.0.0-alpha2",
   "author": {
     "name": "Encode42",
     "email": "me@encode42.dev",
@@ -46,7 +46,7 @@
     "@rollup/plugin-commonjs": "^23.0.3",
     "@rollup/plugin-json": "^5.0.2",
     "@rollup/plugin-node-resolve": "^15.0.1",
-    "@tabler/icons": "^2.0.0-alpha",
+    "@tabler/icons": "^2.0.0-alpha2",
     "@types/common-tags": "^1.8.1",
     "@types/jest": "^29.2.3",
     "@types/semver": "^7.3.13",
